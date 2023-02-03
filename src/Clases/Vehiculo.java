@@ -1,5 +1,7 @@
 package Clases;
 
+import Excepciones.DemasiadoRapidoException;
+
 public abstract class Vehiculo {
     //atributos
     protected String matricula;
@@ -19,7 +21,7 @@ public abstract class Vehiculo {
      * metodo abstracto de acelerar
      * @param velocidad
      */
-    public abstract void acelerar(int velocidad);
+    public abstract void acelerar(int velocidad) throws DemasiadoRapidoException;
 
     //toString
     @Override

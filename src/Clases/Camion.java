@@ -36,12 +36,9 @@ public class Camion extends Vehiculo {
      * @param velocidad
      */
     @Override
-    public void acelerar(int velocidad){
+    public void acelerar(int velocidad) throws DemasiadoRapidoException{
         if(this.remolque !=null && velocidad > 100){
-            try{
-                throw new DemasiadoRapidoException("Vas demasiado rapido");
-            }catch (DemasiadoRapidoException e){
-            }
+            throw new DemasiadoRapidoException("Vas demasiado rapido");
         } else {
             this.velocidad = velocidad;
         }
